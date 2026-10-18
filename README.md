@@ -1,5 +1,9 @@
 # OCS AI 题库后端
 
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)](requirements.txt)
+
 > 一个跑在自己电脑上的小服务，给 **OCS 题库插件**提供 AI 答题接口：收到题目 → 上网搜资料 →
 > DeepSeek 独立作答两遍 → 两遍一致才采用，不一致自动终审 → 结果缓存。
 
@@ -50,6 +54,10 @@ cp .env.example .env      # Windows: copy .env.example .env
 - **Windows**：双击 `启动题库.bat`（自动找 python；找不到会提示你填路径）
 - **命令行**（任何平台）：`python server.py`
 
+> Windows 上如果敲 `python` 弹出的是 Microsoft Store（说明 PATH 里只有占位程序），
+> 就把你真正的 `python.exe` 完整路径写进同目录的 `python-path.txt`（一行，例如 `C:\Python312\python.exe`），
+> 然后继续双击 `启动题库.bat`。这个文件已被 `.gitignore` 忽略，不会传到仓库。
+
 窗口在 = 服务在，关掉窗口就停了。重复启动不会冲突：第二次会提示 `already running` 然后退出。
 
 自检：
@@ -95,8 +103,10 @@ curl http://127.0.0.1:8899/health
 
 ```
 server.py             全部逻辑（就这一个文件）
-启动题库.bat          Windows 一键启动
+启动题库.bat          Windows 一键启动（自动找 Python）
+python-path.txt       可选：本机 python.exe 完整路径，找不到 Python 时用（不进仓库）
 .env.example          配置模板，复制成 .env 再填
+requirements.txt      只是占位：本项目零第三方依赖
 ocs-bank-config.json  粘到 OCS 里的题库配置
 .env                  你的密钥 —— 已在 .gitignore 里，不会被提交
 questions.db          答案缓存（运行时生成）

@@ -1,0 +1,2 @@
+# 本项目只使用 Python 标准库，没有第三方依赖。
+# 这个文件存在，只是为了让习惯性的 `pip install -r requirements.txt` 不会报错。

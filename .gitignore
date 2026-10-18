@@ -1,6 +1,9 @@
 # 密钥：绝对不要提交
 .env
 
+# 本机 python.exe 路径（只对自己这台机器有意义）
+python-path.txt
+
 # 运行时产物
 questions.db
 requests.log
