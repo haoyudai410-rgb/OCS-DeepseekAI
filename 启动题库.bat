@@ -11,6 +11,13 @@ if %errorlevel%==0 (
   exit /b 0
 )
 
+if not exist ".env" (
+  echo [ERROR] .env not found.
+  echo         Copy .env.example to .env and fill in your own DEEPSEEK_API_KEY first.
+  pause
+  exit /b 1
+)
+
 set "PYCMD="
 
 rem 1) local override: put the full path of python.exe into python-path.txt (same folder)
