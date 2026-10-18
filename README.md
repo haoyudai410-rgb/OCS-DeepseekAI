@@ -23,8 +23,8 @@ Pure Python standard library — no dependencies.
 需要 Python 3.8 或更高版本。
 
 ```bash
-git clone https://github.com/haoyudai410-rgb/OCS-DeepseekAI-.git
-cd OCS-DeepseekAI-
+git clone https://github.com/haoyudai410-rgb/OCS-DeepseekAI.git
+cd OCS-DeepseekAI
 ```
 
 配置密钥：
