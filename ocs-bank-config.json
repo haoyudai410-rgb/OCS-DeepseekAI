@@ -1,0 +1,19 @@
+[
+  {
+    "name": "本地AI题库",
+    "homepage": "http://127.0.0.1:8899",
+    "url": "http://127.0.0.1:8899/",
+    "method": "post",
+    "contentType": "json",
+    "type": "GM_xmlhttpRequest",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "data": {
+      "title": "${title}",
+      "options": "${options}",
+      "type": "${type}"
+    },
+    "handler": "return (res)=> res.code === 1 ? [undefined, res.answer] : [res.msg, undefined]"
+  }
+]

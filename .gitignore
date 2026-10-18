@@ -1,0 +1,14 @@
+# 密钥：绝对不要提交
+.env
+
+# 运行时产物
+questions.db
+requests.log
+__pycache__/
+*.pyc
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
